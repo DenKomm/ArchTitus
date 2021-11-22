@@ -49,6 +49,8 @@ PKGS=(
 'ttf-roboto'
 'zoom' # video conferences
 'snap-pac'
+'steam' # gaming section start
+'discord' # gaming section end
 )
 
 for PKG in "${PKGS[@]}"; do
