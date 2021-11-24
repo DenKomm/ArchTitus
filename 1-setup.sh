@@ -236,7 +236,7 @@ fi
 
 echo -e "\nDone!\n"
 if ! source install.conf; then
-	read -p "Please enter username:" username
+	read -p "Please enter username: lowercase characters only" username
 echo "username=$username" >> ${HOME}/ArchTitus/install.conf
 fi
 if [ $(whoami) = "root"  ];
@@ -245,7 +245,7 @@ then
 	passwd $username
 	cp -R /root/ArchTitus /home/$username/
     chown -R $username: /home/$username/ArchTitus
-	read -p "Please name your machine:" nameofmachine
+	read -p "Please name your machine: lowercase characters only" nameofmachine
 	echo $nameofmachine > /etc/hostname
 else
 	echo "You are already a user proceed with aur installs"
